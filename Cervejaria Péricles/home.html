@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervejaria do Péricles</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function LiberaSite(){
+            const URL =new URLSearchParams(window.location.search)
+            let acesso = url.get('acesso')
+
+            if (acesso === "1") {
+                document.getElementById('frasecentral').innerHTML = "Olá! Gostaria de te dar boas vindas a Cervejaria do Pericles. Aqui você encontrará as melhores bebidas do Brasil!"
+                document.getElementById('botaoSite').style.display = "block"
+            } else {
+                document.getElementById('frasecentral').innerHTML = "Sinto muito, mas este site só é permitido para maiores de 18 anos! :("
+                document.getElementById('botaoSite').style.display = "none"
+            }
+        }
+    </script>
+</head>
+<body onload="LiberaSite()">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="" class="links">A cervejaria</a></li>
+                <li><a href="" class="links">Nossas cervejas</a></li>
+                <li><a href="" class="links">Delivery</a></li>
+            </ul>
+        </nav>
+        <div class="carrinhodeCompras">
+            <a href="" class="links">Meu carrinho</a>
+            <img src="assets/images/Vector.png">
+
+        </div>
+        
+    </header>
+    <img src="assets/images/image 4.png" alt="duas canecas de cerveja brindando">
+    
+    <section>
+        <p id="frasecentral"></p>
+    </section>
+    
+    <input type="button" value="Entrar no Site" id="botaoSite">
+</body>
+</html>
